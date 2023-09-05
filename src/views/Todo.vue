@@ -35,9 +35,21 @@ onMounted(() => {
 
   <div class="flex justify-between my-4">
     <p class="text-md">{{ todoStore.countUncompleted }} item left</p>
-    <ButtonComponent @click="todoStore.mode = 'all'" name="All" />
-    <ButtonComponent @click="todoStore.mode = 'active'" name="Active" />
-    <ButtonComponent @click="todoStore.mode = 'completed'" name="Completed" />
+    <ButtonComponent
+      @click="todoStore.mode = 'all'"
+      name="All"
+      :classname="todoStore.mode === 'all'"
+    />
+    <ButtonComponent
+      @click="todoStore.mode = 'active'"
+      name="Active"
+      :classname="todoStore.mode === 'active'"
+    />
+    <ButtonComponent
+      @click="todoStore.mode = 'completed'"
+      name="Completed"
+      :classname="todoStore.mode === 'completed'"
+    />
     <p class="text-md cursor-pointer" @click="todoStore.clearTodo">
       clear completed
     </p>

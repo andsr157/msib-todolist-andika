@@ -17,4 +17,11 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.router-link-exact-active {
+  border: solid white;
+  border-radius: 5px;
+  padding: 3px 8px;
+  border-width: 1px;
+}
+</style>
